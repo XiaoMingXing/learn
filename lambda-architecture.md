@@ -12,6 +12,8 @@ Batch layer
 
 Serving layer
 
+Reference: 
+
 ### Demo: Log analysis system with lambda architecture
 
 #### Overview
@@ -22,17 +24,17 @@ Serving layer
 
 #### Components
 
-Java program: Use this program to mock log producer. This program will generate logs continuously and save into local log file.
+**App deploy in Nginx**: Use this program to mock log producer. This program will generate logs continuously and save into local log file.
 
-Flume: Use this to distribute log data into kafka and HDFS
+**Flume:** Use this to distribute log data into kafka and HDFS
 
-Kafka: Use this to receive access logs in real time
+**Kafka:** Use this to receive access logs in real time
 
-HDFS: Use this to store access logs. and Save all the raw access logs. Seems like the data lake of this architecture
+**HDFS:** Use this to store access logs. and Save all the raw access logs. Seems like the data lake of this architecture
 
-Spark Streaming: Use this to processing real-time data from kafka. 
+**Spark Streaming:** Use this to processing real-time data from kafka.
 
-Spark SQL:
+**Spark SQL:**
 
 
 
