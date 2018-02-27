@@ -2,9 +2,11 @@
 
 When doing streaming process, maybe need to combine the streaming data with historical data to compute the result. For example, if we want to decide whether customer is frequently buy bear or not. we need to calculate the current new coming order with previous orders. Another scenario is when the new streaming data coming in. But some error happen. At this time, Are we throw this data ? No. We need to put it in another persistent place and process it in the future.
 
-Below are typical lambda architecture graph:
+**Below are typical lambda architecture graph:**
 
-Below are explainations of different layers:
+![](/assets/lambda_architecture.png)
+
+**Below are explainations of different layers:**
 
 Speed layer
 
@@ -12,7 +14,7 @@ Batch layer
 
 Serving layer
 
-Reference: 
+Reference:
 
 ### Demo: Log analysis system with lambda architecture
 
@@ -35,8 +37,6 @@ Reference:
 **Spark Streaming:** Use this to processing real-time data from kafka.
 
 **Spark SQL:**
-
-
 
 #### Code
 
