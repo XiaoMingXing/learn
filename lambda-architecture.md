@@ -1,6 +1,6 @@
 # Lambda Architecture
 
-When doing streaming process, maybe need to combine the streaming data with historical data to compute the result. For example, if we want to decide whether customer is frequently buy bear or not. we need to calculate the current new coming order with previous orders. Another scenario is when the new streaming data coming in. But some error happen. At this time, Are we throw this data ? No. We need to put it in another persistent place and process it in the future.
+When doing streaming process, maybe need to combine the streaming data with historical data to compute the result. For example, if we want to decide whether customer is frequently purchase bear or not. we need to calculate the current new coming order with previous orders. Another scenario is when the new streaming data coming in. But some error happen. At this time, Are we throw this data ? No. We need to put it in another persistent place and process it in the future.
 
 **Below is abstraction level of lambda architecture:**
 
@@ -42,8 +42,6 @@ When doing streaming process, maybe need to combine the streaming data with hist
 * Developer is responsible for reading, writing and managing two different storage systems and perform a final combination and serve thing final result
 * Data mush be serialized consistently and kept in sync between two different systems 
 
-
-
 As the questions before, there are some common architecture principles or solutions are trying to solve this problem. Which only need to implement lambda architecture. And make it easy to combine batch processing and real-time processing together. It's named "Unified" lambda architecture
 
 #### Unified lambda architecture:
@@ -54,7 +52,7 @@ Based on “monoids”, supporting Hadoop and Storm as backing infrastructure. U
 
 **\(I have no idea about this one, lots of code\)**
 
-[**Lambdoop**](http://www.slideshare.net/Datadopter/lambdoop-a-framework-for-easy-development-of-big-data-applications) 
+[**Lambdoop**](http://www.slideshare.net/Datadopter/lambdoop-a-framework-for-easy-development-of-big-data-applications)
 
 Based on user-defined “operations”, Avro schemas, supports Hadoop and Storm as backing infrastructure and uses HBase as batch store and Redis as real-time store.
 
