@@ -8,17 +8,31 @@ When doing streaming process, maybe need to combine the streaming data with hist
 
 **Below are explainations of different layers:**
 
-Speed layer
+##### Batch layer
 
-Batch layer
+* Manage master dataset\(all data\). immutable , append-only set of raw data
 
-Serving layer
+* pre-computing arbitrary query functions, called batch views 
 
-Reference:
+* Techs we can use:  HDFS/Hive/S3 - Spark/Flink/MapReduce
+
+##### Speed layer
+
+* compensates for the high latency of updates to the serving layer and deals with recent data only.
+
+* Techs we can use: HBase - Spark Streaming/Storm
+
+##### Serving layer
+
+* Indexes the batch views so that they can be queried in low-latency, ad-hoc way.
+
+* Techs we can use:  Druid / HBase
+
+#### Reference:
+
+http://lambda-architecture.net/
 
 ### Demo: Log analysis system with lambda architecture
-
-#### Overview
 
 #### Architecture
 
@@ -32,13 +46,20 @@ Reference:
 
 **Kafka:** Use this to receive access logs in real time
 
-**HDFS:** Use this to store access logs. and Save all the raw access logs. Seems like the data lake of this architecture
+**HDFS:** Use this to store access logs as raw data. Seems like a data lake
 
 **Spark Streaming:** Use this to processing real-time data from kafka.
 
-**Spark SQL:**
+**Spark SQL: **Use this to re-computing master dataset to get the result
 
-#### Code
+**MySQL/HBase: **Use one of them to save processing result. one table for batch result, another one for realtime result
+
+**Query App: **Use this to query batch result and realtime result, and merge the results together to provide insight
+
+#### Questions:
+
+* How to merge the Realtime View and Batch View?
+* How about if Realtime View result will affect the Batch View result ? Machine Learning Algorithms
 
 #### 
 
