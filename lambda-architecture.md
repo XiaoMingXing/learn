@@ -2,11 +2,19 @@
 
 When doing streaming process, maybe need to combine the streaming data with historical data to compute the result. For example, if we want to decide whether customer is frequently buy bear or not. we need to calculate the current new coming order with previous orders. Another scenario is when the new streaming data coming in. But some error happen. At this time, Are we throw this data ? No. We need to put it in another persistent place and process it in the future.
 
-**Below are typical lambda architecture graph:**
+**Below is abstraction level of lambda architecture:**
 
 ![](/assets/lambda_architecture.png)
 
-**Below are explainations of different layers:**
+
+
+**Below is a more concrete lambda architecture:**
+
+![](/assets/lambda_architect_concrete.png)
+
+
+
+**Explainations of different layers:**
 
 ##### Batch layer
 
@@ -50,9 +58,7 @@ Based on user-defined “operations”, Avro schemas, supports Hadoop and Storm 
 
 Below is short description about Lambdoop:
 
-![](/assets/lambdoop2.png) 
-
-
+![](/assets/lambdoop2.png)
 
 ### Demo: Log analysis system with lambda architecture
 
