@@ -6,13 +6,9 @@ When doing streaming process, maybe need to combine the streaming data with hist
 
 ![](/assets/lambda_architecture.png)
 
-
-
 **Below is a more concrete lambda architecture:**
 
 ![](/assets/lambda_architect_concrete.png)
-
-
 
 **Explainations of different layers:**
 
@@ -22,19 +18,19 @@ When doing streaming process, maybe need to combine the streaming data with hist
 
 * pre-computing arbitrary query functions, called batch views
 
-* Techs we can use:  HDFS/Hive/S3 - Spark/Flink/MapReduce
+* Techs we can use:  **HDFS/Hive/S3 - Spark/Flink/MapReduce**
 
 ##### Speed layer
 
 * compensates for the high latency of updates to the serving layer and deals with recent data only.
 
-* Techs we can use: HBase - Spark Streaming/Storm
+* Techs we can use: **HBase - Spark Streaming/Storm**
 
 ##### Serving layer
 
 * Indexes the batch views so that they can be queried in low-latency, ad-hoc way.
 
-* Techs we can use:  Druid / HBase
+* Techs we can use:  **Druid / HBase**
 
 #### Reference:
 
@@ -46,19 +42,25 @@ When doing streaming process, maybe need to combine the streaming data with hist
 * Developer is responsible for reading, writing and managing two different storage systems and perform a final combination and serve thing final result
 * Data mush be serialized consistently and kept in sync between two different systems 
 
+
+
+As the questions before, there are some common architecture principles or solutions are trying to solve this problem. Which only need to implement lambda architecture. And make it easy to combine batch processing and real-time processing together. It's named "Unified" lambda architecture
+
 #### Unified lambda architecture:
 
 ##### [**Summingbird**](https://speakerdeck.com/sritchie/summingbird-streaming-mapreduce-at-twitter)
 
 Based on “monoids”, supporting Hadoop and Storm as backing infrastructure. Used at Twitter with “Manhattan” as read-only store and Memcached as “real-time” store.
 
-[**Lambdoop**](http://www.slideshare.net/Datadopter/lambdoop-a-framework-for-easy-development-of-big-data-applications)
+**\(I have no idea about this one, lots of code\)**
+
+[**Lambdoop**](http://www.slideshare.net/Datadopter/lambdoop-a-framework-for-easy-development-of-big-data-applications) 
 
 Based on user-defined “operations”, Avro schemas, supports Hadoop and Storm as backing infrastructure and uses HBase as batch store and Redis as real-time store.
 
-Below is short description about Lambdoop:
+**\(Not sure does it close or not. I can't access the formal website\). I think no matter whether it's exist or not. The idea is great to learn. **
 
-![](/assets/lambdoop2.png)
+Below is short description about Lambdoop:![](/assets/lambdoop2.png)
 
 ### Demo: Log analysis system with lambda architecture
 
