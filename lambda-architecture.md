@@ -34,11 +34,9 @@ When doing streaming process, maybe need to combine the streaming data with hist
 
 #### Questions:
 
-We need to maintain two different piece of codes \(one for batch, the other for real time\)
-
-How to combines the results of both layers transparently?
-
-
+* Application logic has to be defined in two different systems \(Batch & Real time\)
+* Developer is responsible for reading, writing and managing two different storage systems and perform a final combination and serve thing final result
+* Data mush be serialized consistently and kept in sync between two different systems 
 
 #### Unified lambda architecture:
 
@@ -49,6 +47,12 @@ Based on “monoids”, supporting Hadoop and Storm as backing infrastructure. U
 [**Lambdoop**](http://www.slideshare.net/Datadopter/lambdoop-a-framework-for-easy-development-of-big-data-applications)
 
 Based on user-defined “operations”, Avro schemas, supports Hadoop and Storm as backing infrastructure and uses HBase as batch store and Redis as real-time store.
+
+Below is short description about Lambdoop:
+
+![](/assets/lambdoop2.png) 
+
+
 
 ### Demo: Log analysis system with lambda architecture
 
