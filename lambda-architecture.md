@@ -12,7 +12,7 @@ When doing streaming process, maybe need to combine the streaming data with hist
 
 * Manage master dataset\(all data\). immutable , append-only set of raw data
 
-* pre-computing arbitrary query functions, called batch views 
+* pre-computing arbitrary query functions, called batch views
 
 * Techs we can use:  HDFS/Hive/S3 - Spark/Flink/MapReduce
 
@@ -30,7 +30,25 @@ When doing streaming process, maybe need to combine the streaming data with hist
 
 #### Reference:
 
-http://lambda-architecture.net/
+[http://lambda-architecture.net/](http://lambda-architecture.net/)
+
+#### Questions:
+
+We need to maintain two different piece of codes \(one for batch, the other for real time\)
+
+How to combines the results of both layers transparently?
+
+
+
+#### Unified lambda architecture:
+
+##### [**Summingbird**](https://speakerdeck.com/sritchie/summingbird-streaming-mapreduce-at-twitter)
+
+Based on “monoids”, supporting Hadoop and Storm as backing infrastructure. Used at Twitter with “Manhattan” as read-only store and Memcached as “real-time” store.
+
+[**Lambdoop**](http://www.slideshare.net/Datadopter/lambdoop-a-framework-for-easy-development-of-big-data-applications)
+
+Based on user-defined “operations”, Avro schemas, supports Hadoop and Storm as backing infrastructure and uses HBase as batch store and Redis as real-time store.
 
 ### Demo: Log analysis system with lambda architecture
 
