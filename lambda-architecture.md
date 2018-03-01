@@ -1,6 +1,8 @@
 # Lambda Architecture
 
-When doing streaming process, maybe need to combine the streaming data with historical data to compute the result. For example, if we want to decide whether customer is frequently purchase bear or not. we need to calculate the current new coming order with previous orders. Another scenario is when the new streaming data coming in. But some error happen. At this time, Are we throw this data ? No. We need to put it in another persistent place and process it in the future.
+When doing streaming process, maybe need to combine the streaming data with historical data to compute the result. For example, if we want to decide whether customer is frequently purchase bear or not. we need to calculate the current new coming order with previous orders. Another 
+
+ is when the new streaming data coming in. But some error happen. At this time, Are we throw this data ? No. We need to put it in another persistent place and process it in the future.
 
 **Below is abstraction level of lambda architecture:**
 
