@@ -1,18 +1,15 @@
 ### Todo list:
 
-* Negotiate about lunch session inside of data group and claim for lunch
-* Negotiate about how many people contribute in this training is affordable ?
-* Check the data books which need to put in office
-* Review about the courses which we can share in the training session
-* Prepare the discuss content with Gordan and Thao
+* [x] Negotiate about lunch session inside of data group and claim for lunch
+* [x] Negotiate about how many people contribute in this training is affordable ?
+* [x] Check the data books which need to put in office
+* [ ] Review about the courses which we can share in the training session
+* [ ] Prepare the discuss content with Gordon and Thao
+  * [ ] Thao/Gordon:  the bootscamp thing. \(how long any experience\)
+
+* [x] Do expense for the taxi and books 
 
 
-
-* Do expense for the taxi and books 
-* 
-
-
-### 
 
 
 
