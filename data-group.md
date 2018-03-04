@@ -1,3 +1,23 @@
+### Todo list:
+
+* Negotiate about lunch session inside of data group and claim for lunch
+* Negotiate about how many people contribute in this training is affordable ?
+* Check the data books which need to put in office
+* Review about the courses which we can share in the training session
+* Prepare the discuss content with Gordan and Thao
+
+
+
+* Do expense for the taxi and books 
+* 
+
+
+### 
+
+
+
+
+
 We have our second success meeting and align together different things today.
 
 People who are interesting with our group, can click below link to join us
@@ -21,8 +41,6 @@ Data modeling and Data storage \(Chapter 2 of Big Data book\)
 \[Current status\]:
 
 We have a long discussion about Lambda architecture. The discussion start from where we put the serving layer. all our attention is focusing on below paragraph.
-
-
 
 \[Future plan\]:
 
