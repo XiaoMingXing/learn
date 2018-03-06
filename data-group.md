@@ -1,19 +1,26 @@
 ### Todo list:
 
+
+
+1. Talk with Ansual about the staffing thing. \( from different project\)
+2. Talk with Kiran about the air conditioner
+3. Book the big conference meeting room, should talk with SP meeting guy.
+
+
+
+
+
+
+
 * [x] Negotiate about lunch session inside of data group and claim for lunch
 * [x] Negotiate about how many people contribute in this training is affordable ?
 * [x] Check the data books which need to put in office
 * [ ] Review about the courses which we can share in the training session
 * [ ] Prepare the discuss content with Gordon and Thao
+
   * [ ] Thao/Gordon:  the bootscamp thing. \(how long any experience\)
 
-* [x] Do expense for the taxi and books 
-
-
-
-
-
-
+* [x] Do expense for the taxi and books
 
 We have our second success meeting and align together different things today.
 
