@@ -2,8 +2,6 @@
 
 Questions: Does it very wired to define the schema?
 
-
-
 ##### Use flow
 
 1. Write thrift defination \(schema\)?
@@ -14,6 +12,14 @@ Questions: Does it very wired to define the schema?
 
 ### Protocol buffers
 
+##### 
+
+##### Questions
+
+1. What's the 
+
+### Apache Avro
+
 ##### Use Flow
 
 1. Define the schema
@@ -22,19 +28,12 @@ Questions: Does it very wired to define the schema?
 
 
 
-##### Questions
-
-1. What's the 
-
-### Apache Avro
 
 
-
-Questions:
+Overall Questions:
 
 1. What's the benefits of this frameworks
-2. 
-
+2. Which scenarios we are choosing which framwork 
 
 
 
