@@ -6,5 +6,5 @@
 * [Data Group](data-group.md)
 * [Protocols](protocols.md)
 * [Batch Layer](batch-layer.md)
-* Data Algorithms
+* [Data Algorithms](data-algorithms.md)
 
