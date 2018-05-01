@@ -7,4 +7,5 @@
 * [Protocols](protocols.md)
 * [Batch Layer](batch-layer.md)
 * [Data Algorithms](data-algorithms.md)
+* [Cassandra](cassandra.md)
 
