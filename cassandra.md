@@ -10,13 +10,9 @@ Here it is explained, how write process occurs in Cassandra,
 
 ![](/assets/cassandra_request.png)
 
-
-
 In Cassandra, writes are not expensive. Cassandra does not support joins, group by, OR clause, aggregations
 
-
-
-The hash ring which used to save data, each cluster node will be assign a token range . 
+The hash ring which used to save data, each cluster node will be assign a token range .
 
 each raw will contain primary key, which is also be hashed to determined which node should be store.
 
@@ -24,11 +20,9 @@ each raw will contain primary key, which is also be hashed to determined which n
 
 A node that receives a client query is referred to as the **coordinator **for the client operation
 
+## Th **consistency level \(CAP Theorem\)**
 
-
-## Th **consistency level \(CAP therom\)**
-
-
+https://docs.datastax.com/en/cassandra/3.0/cassandra/dml/dmlConfigConsistency.html
 
 
 
