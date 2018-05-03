@@ -1,5 +1,11 @@
 ### Cassandra
 
+The links which is good for learning:
+
+https://www.guru99.com/cassandra-data-model-rules.html
+
+
+
 Cassandra does not support joins, group by, OR clause, aggregations
 
 Here it is explained, how write process occurs in Cassandra,
@@ -22,7 +28,5 @@ A node that receives a client query is referred to as the **coordinator **for th
 
 ## Th **consistency level \(CAP Theorem\)**
 
-https://docs.datastax.com/en/cassandra/3.0/cassandra/dml/dmlConfigConsistency.html
-
-
+[https://docs.datastax.com/en/cassandra/3.0/cassandra/dml/dmlConfigConsistency.html](https://docs.datastax.com/en/cassandra/3.0/cassandra/dml/dmlConfigConsistency.html)
 
