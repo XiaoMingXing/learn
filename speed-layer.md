@@ -49,9 +49,12 @@ The questions:
 * What is sloppy quorums?
 * What's that meaning for only one server in the system will be updating the count for a given replica \(Page. 215\). Why use the maximize number will be correct. how about if the diverged at 0
 
-
-
 ### The asynchronous update and synchronous updates
+
+* Synchronous updates: the application issues a request directly to the database and blocks until the update is processed.
+* Asynchronous updates: update requests are places in a queue with the updates occurring at a later time
+
+
 
 ### 
 
