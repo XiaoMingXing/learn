@@ -9,11 +9,7 @@ Two facets of the speed layer:
 * storing the realtime views
 * Processing the incoming data stream and update those views
 
-
-
 The contents of your realtime views will exactly mirror the contents of your batch views.
-
-
 
 The underlying storage layer must therefore meet the following requirements:
 
@@ -22,18 +18,15 @@ The underlying storage layer must therefore meet the following requirements:
 * Scalability - must be distributed across many machines
 * Fault tolerance - replicating data across machines so there are backups
 
-The questions:
 
-* **What's the use case of eventual accuracy? how to do the eventual accuracy computation?**
-* 
+
 ### The realtime views
 
 The complexities of realtime views
 
 * **Online compaction **- periodically the database must perform compaction to reclaim space. and compaction is a resource-intensive process.
+
 * **Concurrency** - Sharing mutable state across threads is a notoriously complex problem
-
-
 
 ### The incremental algorithms in speed layer:
 
@@ -47,7 +40,17 @@ Suppose you have a simple distributed key/value database, and you replicating da
 
 * You can choose to update whatever replicas are available and synchronize with other replicas when the partition is resolved. \(your data system is available but not consistent\)
 
+The solutions:
 
+* Use **conflict-free replicated data types** to solve the diverge between partitions
+
+
+
+The questions:
+
+* **What's the use case of eventual accuracy? how to do the eventual accuracy computation?**
+* What is sloppy quorums?
+* What's that meaning for only one server in the system will be updating the count for a given replica \(Page. 215\). Why use the maximize number will be correct. how about if the diverged at 0
 
 
 
