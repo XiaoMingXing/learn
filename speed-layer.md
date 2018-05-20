@@ -1,5 +1,3 @@
-
-
 **Real time view must support random write? what's the difference between support random write or not?**
 
 * The speed layer data is at most a few hours old and is vastly smaller than the master dataset
