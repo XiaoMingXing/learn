@@ -8,4 +8,5 @@
 * [Batch Layer](batch-layer.md)
 * [Data Algorithms](data-algorithms.md)
 * [Cassandra](cassandra.md)
+* [Speed Layer](speed-layer.md)
 
