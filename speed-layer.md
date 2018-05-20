@@ -56,6 +56,19 @@ The questions:
 
 
 
+### Expiring realtime views
+
+The questions:
+
+* How to decide which parts of data we need to discard?
+* How to switch reading data from realtime view into serving layer batch views.
+
+
+
+### Cassandra
+
+
+
 ### 
 
 
