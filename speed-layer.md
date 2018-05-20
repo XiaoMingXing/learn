@@ -54,8 +54,6 @@ The questions:
 * Synchronous updates: the application issues a request directly to the database and blocks until the update is processed.
 * Asynchronous updates: update requests are places in a queue with the updates occurring at a later time
 
-
-
 ### Expiring realtime views
 
 The questions:
@@ -63,13 +61,9 @@ The questions:
 * How to decide which parts of data we need to discard?
 * How to switch reading data from realtime view into serving layer batch views.
 
-
-
 ### Cassandra
 
-
-
-### 
+###  
 
 
 
