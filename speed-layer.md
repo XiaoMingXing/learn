@@ -18,8 +18,6 @@ The underlying storage layer must therefore meet the following requirements:
 * Scalability - must be distributed across many machines
 * Fault tolerance - replicating data across machines so there are backups
 
-
-
 ### The realtime views
 
 The complexities of realtime views
@@ -43,14 +41,19 @@ Suppose you have a simple distributed key/value database, and you replicating da
 The solutions:
 
 * Use **conflict-free replicated data types** to solve the diverge between partitions
-
-
+* Use **read repair algorithms **
 
 The questions:
 
 * **What's the use case of eventual accuracy? how to do the eventual accuracy computation?**
 * What is sloppy quorums?
 * What's that meaning for only one server in the system will be updating the count for a given replica \(Page. 215\). Why use the maximize number will be correct. how about if the diverged at 0
+
+
+
+### The asynchronous update and synchronous updates
+
+### 
 
 
 
