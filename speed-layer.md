@@ -65,8 +65,6 @@ The questions:
 
 * Cassandra uses the keys to partition a column family across a cluster
 * 
-
-
 ### 
 
 
