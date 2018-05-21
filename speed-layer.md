@@ -64,8 +64,7 @@ The questions:
 ### Cassandra
 
 * Cassandra uses the keys to partition a column family across a cluster
-* 
-### 
+* Online compaction and the need to rebalance key ranges can cause significant pain.
 
 
 
