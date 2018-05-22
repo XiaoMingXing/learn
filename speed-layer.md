@@ -1,5 +1,3 @@
-
-
 ### Speed layer
 
 ### ![](/assets/speed layer.png)
@@ -53,6 +51,21 @@ The questions:
 
 * **What's the use case of eventual accuracy? how to do the eventual accuracy computation?**
 * What is sloppy quorums?
+
+  R+W &gt; N guarantees consistency? :  read quorum + writes quorum &gt; number of quorums
+
+ For example, if N equals three in a cluster of five nodes \(A, B, C, D, and E\) and nodes A, B, and C are the top three preferred nodes, then minus any error conditions writes will be made to nodes A, B, and C. But if B and C were not available for a write, then a system using a **sloppy quorum** would write to D and E instead. If this were to happen, then even if the write quorum \(W\) was 3 and the read quorum \(R\) was 2, making R+W&gt;N, a read immediately following this write could return data from B and C, which would be inconsistent because only A, D, and E would have the latest value.
+
+1. **Sloppy quorums** - as outlined in the Dynamo paper.
+2. **Strict quorums** - writes do not persist if we cannot get acks back from W quorum member
+3. **Strict-warn quorums** - writes return an error if we cannot get acks back from W quorum members; however, the data might persist despite the acknowledgment.
+
+
+
+According to the Amazon Dynamo article, Dynamo mitigates this inconsistency through hinted handoffs. If the system needs to write to nodes D and E instead of B and C, it informs D that its write was meant for B and informs E that its write was meant for C. Nodes D and E keep this information in a temporary store and periodically poll B and C for availability. Once B and C become available, D and E send over the writes.
+
+
+
 * What's that meaning for only one server in the system will be updating the count for a given replica \(Page. 215\). Why use the maximize number will be correct. how about if the diverged at 0
 
 ### The asynchronous update and synchronous updates
