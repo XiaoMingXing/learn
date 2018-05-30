@@ -9,4 +9,5 @@
 * [Data Algorithms](data-algorithms.md)
 * [Cassandra](cassandra.md)
 * [Speed Layer](speed-layer.md)
+* [Speed Layer practise](speed-layer-practise.md)
 
